@@ -11,12 +11,12 @@
 
       $link = getConnection();
    
-    $query = "insert into tb_enderecos values('$cep', '$logradouro', '$bairro', '$cidade', '$estado', '$complemento')";
+    $query = "INSERT INTO tb_enderecos VALUES(null,'{$cep}', '{$logradouro}', '{$bairro}', '{$cidade}', '{$estado}', '{$complemento}')";
     echo $query;
     //exit;
     
         mysqli_query($link, $query);
-        return true;
-        header("location:form_endereco.htm");
+        
+        header('Location:form_endereco.html');
         die();
   }
